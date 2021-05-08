@@ -2,5 +2,8 @@
   height: 80%;
   width: 30%;
   min-width: 320px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
   border: 1px solid black;
 }
