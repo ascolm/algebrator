@@ -10,6 +10,7 @@
     "@types/node": "^12.20.12",
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.3",
+    "node-sass": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -26,7 +27,23 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "keyword-spacing": "error",
+      "linebreak-style": "error",
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": "error",
+      "space-before-blocks": "error",
+      "no-undef": "off",
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": {
     "production": [
@@ -39,5 +56,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^4.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint ./",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
