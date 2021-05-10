@@ -64,6 +64,10 @@ const Main: React.FC = () => {
     setActiveOperator('');
   }
 
+  function decimalButtonHandler () {
+    if (!currentValue.match(/\./)) setCurrentValue(currentValue => currentValue + '.');
+  }
+
   return (
     <div className={styles.mainContainer}>
       <Display displayedValue={displayedValue}/>
@@ -72,6 +76,7 @@ const Main: React.FC = () => {
         operatorHandler={operatorButtonHandler}
         calculateHandler={calculateButtonHandler}
         clearHandler={clearButtonHandler}
+        decimalHandler={decimalButtonHandler}
       />
     </div>
   );

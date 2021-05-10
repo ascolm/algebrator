@@ -6,9 +6,10 @@ export interface Props {
   operatorHandler: (value: string) => void;
   calculateHandler: () => void;
   clearHandler: () => void;
+  decimalHandler: () => void;
 }
 
-const Keypad: React.FC<Props> = ({ numberHandler, operatorHandler, calculateHandler, clearHandler }) => {
+const Keypad: React.FC<Props> = ({ numberHandler, operatorHandler, calculateHandler, clearHandler, decimalHandler }) => {
   return (
     <div className={styles.keypadContainer}>
       <Button value='7' clickHandler={numberHandler}/>
@@ -25,7 +26,7 @@ const Keypad: React.FC<Props> = ({ numberHandler, operatorHandler, calculateHand
       <Button value='=' size='2' clickHandler={calculateHandler}/>
       <Button value='AC' clickHandler={clearHandler}/>
       <Button value='0' clickHandler={numberHandler}/>
-      <Button value='.' clickHandler={numberHandler}/>
+      <Button value='.' clickHandler={decimalHandler}/>
     </div>
   );
 };
