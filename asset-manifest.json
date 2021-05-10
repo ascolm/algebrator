@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/algebrator/static/css/main.f40df9db.chunk.css",
-    "main.js": "/algebrator/static/js/main.5f1f1d2f.chunk.js",
-    "main.js.map": "/algebrator/static/js/main.5f1f1d2f.chunk.js.map",
+    "main.js": "/algebrator/static/js/main.2003be56.chunk.js",
+    "main.js.map": "/algebrator/static/js/main.2003be56.chunk.js.map",
     "runtime-main.js": "/algebrator/static/js/runtime-main.ff22438f.js",
     "runtime-main.js.map": "/algebrator/static/js/runtime-main.ff22438f.js.map",
     "static/js/2.f5fa6fb1.chunk.js": "/algebrator/static/js/2.f5fa6fb1.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.ff22438f.js",
     "static/js/2.f5fa6fb1.chunk.js",
     "static/css/main.f40df9db.chunk.css",
-    "static/js/main.5f1f1d2f.chunk.js"
+    "static/js/main.2003be56.chunk.js"
   ]
 }
