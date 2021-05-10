@@ -6,6 +6,7 @@ html, body{
 
 .App{
   height: 100vh;
+  background-color: #e7e7e7;
   display: flex;
   align-items: center;
   justify-content: center;

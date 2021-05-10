@@ -2,13 +2,14 @@ import styles from './button.module.scss';
 
 export interface Props {
   value: string;
-  size?: string;
   clickHandler: (value: string) => void;
+  size?: string;
+  color?: string;
 }
 
-const Button: React.FC<Props> = ({ value, size = '', clickHandler }) => {
+const Button: React.FC<Props> = ({ value, size = '', clickHandler, color }) => {
   return (
-    <button className={`${styles.buttonContainer} ${styles['size-' + size]}`} onClick={() => clickHandler(value)}>{value}</button>
+    <button className={`${styles.buttonContainer} ${styles['size-' + size]}`} style={{color}} onClick={() => clickHandler(value)}>{value}</button>
   );
 };
 

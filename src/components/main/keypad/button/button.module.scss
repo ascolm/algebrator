@@ -1,12 +1,18 @@
 .buttonContainer{
   cursor: pointer;
-  border: 1px solid black;
   font-size: 1.25rem;
+  background-color: #23262e;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   &:hover{
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  &:nth-child(4n) {
+    color: #e97778;
   }
 }
 
