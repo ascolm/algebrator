@@ -5,12 +5,12 @@ import Keypad from 'components/main/keypad/keypad';
 
 const Main: React.FC = () => {
   let [displayedValue, setDisplayedValue] = useState<string>('0');
-  let [currentValue, setCurrentValue] = useState<string>('0');
+  let [currentValue, setCurrentValue] = useState<string | null>(null);
   let [memoryValue, setMemoryValue] = useState<string>('0');
   let [activeOperator, setActiveOperator] = useState<string>('');
 
   useEffect(() => {
-    if (currentValue !== '0') {
+    if (currentValue !== null) {
       setDisplayedValue(currentValue);
     } else if (memoryValue !== '0') {
       setDisplayedValue(memoryValue);
@@ -18,7 +18,7 @@ const Main: React.FC = () => {
   }, [currentValue]);
 
   function numberButtonHandler (value: string) {
-    if (currentValue === '0') {
+    if (currentValue === null) {
       setCurrentValue(value);
     } else {
       setCurrentValue(valueOnDisplay =>  valueOnDisplay + value);
@@ -27,14 +27,16 @@ const Main: React.FC = () => {
 
   function operatorButtonHandler (value: string) {
     if (!activeOperator) {
-      if (memoryValue === '0') setMemoryValue(currentValue);
+      if (memoryValue === '0' && currentValue !== null) setMemoryValue(currentValue);
       setActiveOperator(value);
     } else {
       setActiveOperator(value);
-      setMemoryValue(valueInMemory => '' + calculate(valueInMemory, activeOperator, currentValue));
+      if (currentValue !== null) {
+        setMemoryValue(valueInMemory => '' + calculate(valueInMemory, activeOperator, currentValue!));
+      }
     }
 
-    setCurrentValue('0');
+    setCurrentValue(null);
   }
 
   function calculate (valueL: string, operator: string, valueR: string) {
@@ -50,22 +52,22 @@ const Main: React.FC = () => {
   }
 
   function calculateButtonHandler () {
-    if (activeOperator) {
-      setMemoryValue(valueInMemory => '' + calculate(valueInMemory, activeOperator, currentValue));
+    if (activeOperator && currentValue !== null) {
+      setMemoryValue(valueInMemory => '' + calculate(valueInMemory, activeOperator, currentValue!));
       setActiveOperator('');
-      setCurrentValue('0');
+      setCurrentValue(null);
     }
   }
 
   function clearButtonHandler () {
     setDisplayedValue('0');
-    setCurrentValue('0');
+    setCurrentValue(null);
     setMemoryValue('0');
     setActiveOperator('');
   }
 
   function decimalButtonHandler () {
-    if (!currentValue.match(/\./)) setCurrentValue(currentValue => currentValue + '.');
+    if (currentValue !== null && !currentValue.match(/\./)) setCurrentValue(currentValue => currentValue + '.');
   }
 
   return (
