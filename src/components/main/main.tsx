@@ -43,8 +43,9 @@ const Main: React.FC = () => {
 
   function calculateButtonHandler () {
     if (activeOperator && currentValue !== null) {
-      setMemoryValue(valueInMemory => '' + calculate(valueInMemory, activeOperator, currentValue!));
+      setDisplayedValue('' + calculate(memoryValue, activeOperator, currentValue!));
       setActiveOperator('');
+      setMemoryValue('0');
       setCurrentValue(null);
     }
   }
