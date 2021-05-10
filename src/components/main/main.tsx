@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { calculate } from './main-helpers';
 import styles from './main.module.scss';
 import Display from 'components/main/display/display';
 import Keypad from 'components/main/keypad/keypad';
@@ -37,18 +38,6 @@ const Main: React.FC = () => {
     }
 
     setCurrentValue(null);
-  }
-
-  function calculate (valueL: string, operator: string, valueR: string) {
-    const valueLeft = parseFloat(valueL);
-    const valueRight = parseFloat(valueR);
-
-    switch (operator) {
-    case ('+'):
-      return valueLeft + valueRight;
-    case ('-'):
-      return valueLeft - valueRight;
-    }
   }
 
   function calculateButtonHandler () {
