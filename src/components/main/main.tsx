@@ -27,8 +27,8 @@ const Main: React.FC = () => {
 
   function operatorButtonHandler (value: string) {
     if (!activeOperator) {
+      if (memoryValue === '0') setMemoryValue(currentValue);
       setActiveOperator(value);
-      setMemoryValue(currentValue);
     } else {
       setActiveOperator(value);
       setMemoryValue(valueInMemory => '' + calculate(valueInMemory, activeOperator, currentValue));
@@ -49,10 +49,18 @@ const Main: React.FC = () => {
     }
   }
 
+  function calculateButtonHandler () {
+    if (activeOperator) {
+      setMemoryValue(valueInMemory => '' + calculate(valueInMemory, activeOperator, currentValue));
+      setActiveOperator('');
+      setCurrentValue('0');
+    }
+  }
+
   return (
     <div className={styles.mainContainer}>
       <Display displayedValue={displayedValue}/>
-      <Keypad numberHandler={numberButtonHandler} operatorHandler={operatorButtonHandler}/>
+      <Keypad numberHandler={numberButtonHandler} operatorHandler={operatorButtonHandler} calculateHandler={calculateButtonHandler}/>
     </div>
   );
 };
