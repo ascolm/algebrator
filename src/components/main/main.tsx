@@ -57,10 +57,22 @@ const Main: React.FC = () => {
     }
   }
 
+  function clearButtonHandler () {
+    setDisplayedValue('0');
+    setCurrentValue('0');
+    setMemoryValue('0');
+    setActiveOperator('');
+  }
+
   return (
     <div className={styles.mainContainer}>
       <Display displayedValue={displayedValue}/>
-      <Keypad numberHandler={numberButtonHandler} operatorHandler={operatorButtonHandler} calculateHandler={calculateButtonHandler}/>
+      <Keypad
+        numberHandler={numberButtonHandler}
+        operatorHandler={operatorButtonHandler}
+        calculateHandler={calculateButtonHandler}
+        clearHandler={clearButtonHandler}
+      />
     </div>
   );
 };
