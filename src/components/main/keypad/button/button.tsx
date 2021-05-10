@@ -9,7 +9,7 @@ export interface Props {
 
 const Button: React.FC<Props> = ({ value, size = '', clickHandler, color }) => {
   return (
-    <button className={`${styles.buttonContainer} ${styles['size-' + size]}`} style={{color}} onClick={() => clickHandler(value)}>{value}</button>
+    <button className={`${styles.buttonContainer} ${size ? styles['size-' + size] : ''}`} style={{color}} onClick={() => clickHandler(value)}>{value}</button>
   );
 };
 
