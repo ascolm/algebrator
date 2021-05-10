@@ -8,3 +8,18 @@
   background-color: #292d36;
   border-radius: 5px;
 }
+
+.dcmnLogo{
+  width: 3rem;
+  height: auto;
+  margin-bottom: 1rem;
+  animation-name: fadeInAndOut;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeInAndOut{
+  0% {background-color: rgba(255, 255, 255, 0);}
+  50% {background-color: rgba(255, 255, 255, 1);}
+  100% {background-color: rgba(255, 255, 255, 0);}
+}

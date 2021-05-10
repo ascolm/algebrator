@@ -1,5 +1,6 @@
 import styles from './keypad.module.scss';
 import Button from './button/button';
+import React from 'react';
 
 export interface Props {
   numberHandler: (value: string) => void;
@@ -31,4 +32,4 @@ const Keypad: React.FC<Props> = ({ numberHandler, operatorHandler, calculateHand
   );
 };
 
-export default Keypad;
+export default React.memo(Keypad);

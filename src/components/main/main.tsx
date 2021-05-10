@@ -3,6 +3,7 @@ import { calculate } from './main-helpers';
 import styles from './main.module.scss';
 import Display from 'components/main/display/display';
 import Keypad from 'components/main/keypad/keypad';
+import logo from 'assets/dcmnLogo.png';
 
 const Main: React.FC = () => {
   let [displayedValue, setDisplayedValue] = useState<string>('0');
@@ -61,6 +62,7 @@ const Main: React.FC = () => {
 
   return (
     <div className={styles.mainContainer}>
+      <img src={logo} alt='DCMN logo' className={styles.dcmnLogo}></img>
       <Display displayedValue={displayedValue}/>
       <Keypad
         numberHandler={numberButtonHandler}
