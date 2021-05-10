@@ -200,4 +200,16 @@ describe('should accurately perform operations', () => {
     userEvent.click(buttonPlus);
     expect(display).toHaveTextContent('6');
   });
+
+  it('should chain operations after equals button if an operator is clicked', () => {
+    userEvent.click(button3);
+    userEvent.click(buttonPlus);
+    userEvent.click(button4);
+    userEvent.click(buttonEqual);
+    expect(display).toHaveTextContent('7');
+    userEvent.click(buttonPlus);
+    userEvent.click(button3);
+    userEvent.click(buttonEqual);
+    expect(display).toHaveTextContent('10');
+  });
 });

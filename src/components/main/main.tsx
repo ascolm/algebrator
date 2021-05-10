@@ -14,12 +14,14 @@ const Main: React.FC = () => {
   useEffect(() => {
     if (currentValue !== null) {
       setDisplayedValue(currentValue);
-    } else if (memoryValue !== '0') {
+    } else {
       setDisplayedValue(memoryValue);
     }
   }, [currentValue]);
 
   function numberButtonHandler (value: string) {
+    if (memoryValue !== '0' && !activeOperator) setMemoryValue('0');
+
     if (currentValue === null) {
       setCurrentValue(value);
     } else {
@@ -43,9 +45,9 @@ const Main: React.FC = () => {
 
   function calculateButtonHandler () {
     if (activeOperator && currentValue !== null) {
-      setDisplayedValue('' + calculate(memoryValue, activeOperator, currentValue!));
+      // setDisplayedValue('' + calculate(memoryValue, activeOperator, currentValue!));
+      setMemoryValue('' + calculate(memoryValue, activeOperator, currentValue!));
       setActiveOperator('');
-      setMemoryValue('0');
       setCurrentValue(null);
     }
   }
