@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/algebrator/static/css/main.c1914269.chunk.css",
-    "main.js": "/algebrator/static/js/main.f75b1bbf.chunk.js",
-    "main.js.map": "/algebrator/static/js/main.f75b1bbf.chunk.js.map",
+    "main.css": "/algebrator/static/css/main.f40df9db.chunk.css",
+    "main.js": "/algebrator/static/js/main.722d15f6.chunk.js",
+    "main.js.map": "/algebrator/static/js/main.722d15f6.chunk.js.map",
     "runtime-main.js": "/algebrator/static/js/runtime-main.ff22438f.js",
     "runtime-main.js.map": "/algebrator/static/js/runtime-main.ff22438f.js.map",
     "static/js/2.f5fa6fb1.chunk.js": "/algebrator/static/js/2.f5fa6fb1.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.90d8d153.chunk.js": "/algebrator/static/js/3.90d8d153.chunk.js",
     "static/js/3.90d8d153.chunk.js.map": "/algebrator/static/js/3.90d8d153.chunk.js.map",
     "index.html": "/algebrator/index.html",
-    "static/css/main.c1914269.chunk.css.map": "/algebrator/static/css/main.c1914269.chunk.css.map",
+    "static/css/main.f40df9db.chunk.css.map": "/algebrator/static/css/main.f40df9db.chunk.css.map",
     "static/js/2.f5fa6fb1.chunk.js.LICENSE.txt": "/algebrator/static/js/2.f5fa6fb1.chunk.js.LICENSE.txt",
     "static/media/dcmnLogo.8bb0bb4d.png": "/algebrator/static/media/dcmnLogo.8bb0bb4d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ff22438f.js",
     "static/js/2.f5fa6fb1.chunk.js",
-    "static/css/main.c1914269.chunk.css",
-    "static/js/main.f75b1bbf.chunk.js"
+    "static/css/main.f40df9db.chunk.css",
+    "static/js/main.722d15f6.chunk.js"
   ]
 }
