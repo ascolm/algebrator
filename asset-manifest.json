@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/algebrator/static/css/main.c1914269.chunk.css",
-    "main.js": "/algebrator/static/js/main.8bf66f5b.chunk.js",
-    "main.js.map": "/algebrator/static/js/main.8bf66f5b.chunk.js.map",
-    "runtime-main.js": "/algebrator/static/js/runtime-main.ce8141d6.js",
-    "runtime-main.js.map": "/algebrator/static/js/runtime-main.ce8141d6.js.map",
-    "static/js/2.53dd8f84.chunk.js": "/algebrator/static/js/2.53dd8f84.chunk.js",
-    "static/js/2.53dd8f84.chunk.js.map": "/algebrator/static/js/2.53dd8f84.chunk.js.map",
-    "static/js/3.fee6f233.chunk.js": "/algebrator/static/js/3.fee6f233.chunk.js",
-    "static/js/3.fee6f233.chunk.js.map": "/algebrator/static/js/3.fee6f233.chunk.js.map",
+    "main.js": "/algebrator/static/js/main.14208503.chunk.js",
+    "main.js.map": "/algebrator/static/js/main.14208503.chunk.js.map",
+    "runtime-main.js": "/algebrator/static/js/runtime-main.ff22438f.js",
+    "runtime-main.js.map": "/algebrator/static/js/runtime-main.ff22438f.js.map",
+    "static/js/2.f5fa6fb1.chunk.js": "/algebrator/static/js/2.f5fa6fb1.chunk.js",
+    "static/js/2.f5fa6fb1.chunk.js.map": "/algebrator/static/js/2.f5fa6fb1.chunk.js.map",
+    "static/js/3.90d8d153.chunk.js": "/algebrator/static/js/3.90d8d153.chunk.js",
+    "static/js/3.90d8d153.chunk.js.map": "/algebrator/static/js/3.90d8d153.chunk.js.map",
     "index.html": "/algebrator/index.html",
     "static/css/main.c1914269.chunk.css.map": "/algebrator/static/css/main.c1914269.chunk.css.map",
-    "static/js/2.53dd8f84.chunk.js.LICENSE.txt": "/algebrator/static/js/2.53dd8f84.chunk.js.LICENSE.txt",
+    "static/js/2.f5fa6fb1.chunk.js.LICENSE.txt": "/algebrator/static/js/2.f5fa6fb1.chunk.js.LICENSE.txt",
     "static/media/dcmnLogo.8bb0bb4d.png": "/algebrator/static/media/dcmnLogo.8bb0bb4d.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ce8141d6.js",
-    "static/js/2.53dd8f84.chunk.js",
+    "static/js/runtime-main.ff22438f.js",
+    "static/js/2.f5fa6fb1.chunk.js",
     "static/css/main.c1914269.chunk.css",
-    "static/js/main.8bf66f5b.chunk.js"
+    "static/js/main.14208503.chunk.js"
   ]
 }
